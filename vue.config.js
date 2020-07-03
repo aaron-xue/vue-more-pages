@@ -5,5 +5,18 @@ module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
         ? '/app/'
         : '/',
-    outputDir: 'dist/app'
+    outputDir: 'dist/app',
+    devServer: {
+        host: 'localhost',
+        port: '8080',
+        proxy: {
+            '/': {
+                historyApiFallback: true,
+                target: 'https://api.stage.shenzhoubb.com',
+                ws: false,
+                changeOrigin: true
+            }
+        },
+        open: true
+    },
 }

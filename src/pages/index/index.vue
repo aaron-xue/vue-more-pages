@@ -1,25 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="../../assets/logo.png">
-    <HelloWorld msg="页面1：index（默认显示）"/>
+    <img alt="Vue logo" src="../../assets/logo.png" />
+    <HelloWorld msg="页面1：index（默认显示）" />
     <p>页面2URL：http://localhost:8081/ceshi2.html</p>
+    <Button>dsadosado</Button>
   </div>
 </template>
 
 <script>
-import HelloWorld from '../../components/HelloWorld.vue'
+import HelloWorld from "../../components/HelloWorld.vue";
+import { Button } from "vant";
 
 export default {
-  name: 'app',
+  name: "App",
   components: {
-    HelloWorld
+    HelloWorld,
+    Button
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
